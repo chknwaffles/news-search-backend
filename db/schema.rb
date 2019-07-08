@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2019_07_05_171018) do
     t.string "urlImage"
     t.string "publishedAt"
     t.text "content"
-    t.string "location", default: [], array: true
+    t.float "location", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
