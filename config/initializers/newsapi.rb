@@ -1,1 +1,0 @@
-$newsapi = News.new(Rails.application.credentials.newsapi[:access_key])
