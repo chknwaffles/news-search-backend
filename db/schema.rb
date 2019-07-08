@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2019_07_05_174440) do
   enable_extension "plpgsql"
 
   create_table "articles", force: :cascade do |t|
+    t.string "topic"
     t.string "source"
     t.string "author"
     t.string "title"
