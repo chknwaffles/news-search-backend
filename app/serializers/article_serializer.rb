@@ -1,3 +1,4 @@
 class ArticleSerializer < ActiveModel::Serializer
-  attributes :id, :source, :author, :title, :description, :url, :urlImage, :publishedAt, :content, :location
+  belongs_to :user
+  attributes :id, :source, :author, :title, :description, :url, :urlImage, :publishedAt, :content
 end
