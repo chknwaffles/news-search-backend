@@ -19,6 +19,4 @@ class AuthController < ApplicationController
       render json: {errors: "Don't touch my cookies!"}
     end
   end
-
-
 end
