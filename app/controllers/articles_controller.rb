@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
     def index 
-        @articles = Article.all
+        @articles = Article.getHeadlines()
         render json: @articles
     end
 
