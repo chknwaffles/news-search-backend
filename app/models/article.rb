@@ -1,7 +1,7 @@
 require 'socket'
 
 class Article < ApplicationRecord
-  has_many :users
+  has_and_belongs_to_many :users
 
   def self.fetchData(topic)
       all_articles = []
