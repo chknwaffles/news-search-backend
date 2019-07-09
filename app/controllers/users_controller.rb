@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+    render json: @users
+  end
 
   def show
     user = User.find(params[:id])
@@ -15,5 +19,14 @@ class UsersController < ApplicationController
     else
       render json: {errors: user.errors.full_messages}
     end
+  end
+
+  def like
+    @article = Article.find(params[:article_id])
+    @user = User.find(params[:id])
+
+    @user.articles << @article
+    @user.save
+    render json: @user
   end
 end
