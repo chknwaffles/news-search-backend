@@ -25,8 +25,13 @@ class UsersController < ApplicationController
     @article = Article.find(params[:article_id])
     @user = User.find(params[:id])
 
-    @user.articles << @article
-    @user.save
+    if @user.articles.include? @article
+      @user.articles.delete(@article)
+    else
+      @user.articles << @article
+      @user.save
+    end
+
     render json: @user
   end
 end
