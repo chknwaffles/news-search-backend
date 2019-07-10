@@ -21,12 +21,13 @@ class UsersController < ApplicationController
     end
   end
 
-  def like
+  def favorite
     @article = Article.find(params[:article_id])
     @user = User.find(params[:id])
 
     if @user.articles.include? @article
       @user.articles.delete(@article)
+
     else
       @user.articles << @article
       @user.save

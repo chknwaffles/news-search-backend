@@ -9,7 +9,7 @@ class Article < ApplicationRecord
       formatted_date = date.strftime('%Y-%b-%d')
       api_articles = $newsapi.get_everything(q: topic, from: formatted_date, to: formatted_date, language: 'en', page: 1)
       api_articles.each do |article|
-          all_articles << Article.find_or_create_by(topic: topic, source: article.name, author: article.author, title: article.title, description: article.description, url: article.url, urlImage: article.urlToImage, publishedAt: article.publishedAt)
+          all_articles << Article.find_or_create_by(topic: topic, source: article.name, author: article.author, title: article.title, description: article.description, url: article.url, urlImage: article.urlToImage, publishedAt: article.publishedAt, likes: 0, dislikes: 0)
       end
 
       all_articles

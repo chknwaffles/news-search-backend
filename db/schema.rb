@@ -25,7 +25,8 @@ ActiveRecord::Schema.define(version: 2019_07_09_154644) do
     t.string "urlImage"
     t.string "publishedAt"
     t.text "content"
-    t.integer "user_id"
+    t.integer "likes", default: 0
+    t.integer "dislikes", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

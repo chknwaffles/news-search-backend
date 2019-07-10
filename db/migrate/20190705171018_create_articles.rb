@@ -10,7 +10,8 @@ class CreateArticles < ActiveRecord::Migration[5.2]
       t.string :urlImage
       t.string :publishedAt
       t.text :content
-      
+      t.integer :likes, default: 0
+      t.integer :dislikes, default: 0
       t.timestamps
     end
   end
