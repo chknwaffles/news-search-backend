@@ -1,24 +1,35 @@
-# README
+<h3 align="center">News Search</h3>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<p align="center"> A web application that reports top and current news articles with the ability to save and like articles
+    <br> 
+</p>
 
-Things you may want to cover:
+## Getting Started
+### Prerequisites
+Frontend Repo available here: https://github.com/chknwaffles/news-search
 
-* Ruby version
+### Installing
+OSX & Linux:
 
-* System dependencies
+Frontend:
+```
+npm install
+```
 
-* Configuration
+Backend:
+```
+bundle install
+```
+## Usage
+Users can search through any topic for articles:
 
-* Database creation
 
-* Database initialization
+Users can save articles to their account:
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Full Demo available here: 
 
-* Deployment instructions
-
-* ...
+## Built Using
+- [PostgreSQL](https://www.postgresql.org/) - Database
+- [Ruby On Rails](https://rubyonrails.org/) - Server Framework/Environment
+- [ReactJs](https://reactjs.org/) - Web Framework
